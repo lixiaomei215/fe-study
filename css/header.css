@@ -21,7 +21,7 @@ body {
   float: left;
 }
 
-.tobar-nav span {
+.tobar-nav .sep {
   margin: 0.3em;
   color: #424242;
 }
@@ -29,23 +29,51 @@ body {
 .tobar-nav-item {
   color: #b0b0b0;
   line-height: 40px;
-  display: inline-block;
+  display: inline-block; 
+   /* 设置为行内元素 */
   text-decoration: none;
+  /* 去除下划线 */
+}
+
+.tobar-nav-item.download {
+  position: relative;
 }
 
 .tobar-nav-item:hover {
   color: #fff;
 }
 
-.tobar-nav-item.download span {
-  display: none;
+.tobar-nav-item.download .appcode {
+  position: absolute;
+  top: 40px;
+  left: -80%;
+  width: 124px;
+  height: 0;
+  background-color: #fff;
+  font-size: 14px;
+  color: #333;
+  box-shadow: 0 1px 5px #aaa;
+  /* 设置阴影效果 */
+  transition: height .3s;
+  /* 设置过度 */
+  overflow: hidden;
 }
 
-.tobar-nav-item.download:hover span {
+.tobar-nav-item.download:hover .appcode {
   display: inline-block;
-  color: #fff;
+  height: 148px;
+
 }
 
+.tobar-nav-item.download img {
+  display: block;
+  margin: 18px auto 12px;
+}
+.tobar-nav-item.download .appcode span {
+  display: block;
+  line-height: 1;
+  text-align: center;
+}
 
 .topbar-info {
   float: right;
